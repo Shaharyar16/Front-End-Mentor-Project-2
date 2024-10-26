@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 4em 2.5em;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  background-color: hsl(0, 0%, 98%);
+}
+header {
+  text-align: center;
+}
+.main {
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+.main > span {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.card {
+  background-color: white;
+  margin-top: 3em;
+  box-shadow: 5px 5px 5px hsl(210, 12%, 90%);
+  width: 100%;
+  padding: 1em;
+  border-radius: 5px;
+  height: 100%;
+}
+.svg {
+  text-align: end;
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  header {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  .card {
+    padding: 1.5em;
+  }
+}
+@media (min-width: 1100px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20% 20% 20% 20%;
+    width: 80%;
+
+    margin: 0 auto;
+    gap: 1em;
+  }
+  .card1 {
+    grid-column: 1/2;
+    grid-row: 2 / span 2;
+  }
+  .card2,
+  .card3 {
+    grid-column: 2/3;
+  }
+  .card2 {
+    grid-row: 1 / span 2;
+  }
+  .card3 {
+    grid-row: 3 / span 2;
+  }
+  .card4 {
+    grid-column: 3;
+    grid-row: 2 / span 2;
+  }
+}
